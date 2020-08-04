@@ -1,54 +1,54 @@
-﻿var apiKey = "PUT_YOUR_API_KEY_HERE"; // darksky.net api key
-var latitude = "45.536031"; // Showing Montreal.  search your city on google map and look at the url to get your latitude and longitude
-var longitude = "-73.5906905";
-var lang = "en"; // too many options.  check here https://darksky.net/dev/docs/forecast
-var units = "si"; // auto, ca, uk2, us, si
-var degreeSymbol = "C"; // C or F
-var rainPrecUnit = "mm";
-var snowPrecUnit = "cm";
-var windUnit = "km/h"
-var forecastNbOfDays = 6; // 0 to 8
-var hourlyNbOfHours = 20; // 0-49
-var theme = "blue"; // "blue", "black", "white"
+﻿const apiKey = ""; // darksky.net api key
+const latitude = "45.536031"; // Showing Montreal.  search your city on google map and look at the url to get your latitude and longitude
+const longitude = "-73.5906905";
+const lang = "en"; // too many options.  check here https://darksky.net/dev/docs/forecast
+const units = "si"; // auto, ca, uk2, us, si
+const degreeSymbol = "C"; // C or F
+const rainPrecUnit = "mm";
+const snowPrecUnit = "cm";
+const windUnit = "km/h"
+const forecastNbOfDays = 6; // 0 to 8
+const hourlyNbOfHours = 20; // 0-49
+const theme = "blue"; // "blue", "black", "white"
 
-var showScrollingAlerts = true;
-var showCurrentWeather = true;
-var showCurrentIcon = true;
-var showCurrentSummary = true;
-var showCurrentWind = true;
-var showCurrentWindBearing = true;
-var showCurrentHumidity = true;
-var showCurrentDate = true;
-var showCurrentTime = true;
+let showScrollingAlerts = true;
+let showCurrentWeather = true;
+let showCurrentIcon = true;
+let showCurrentSummary = true;
+let showCurrentWind = true;
+let showCurrentWindBearing = true;
+let showCurrentHumidity = true;
+let showCurrentDate = true;
+let showCurrentTime = true;
 
-var showHourlyIcon = true;
-var showHourlyWind = true;
-var showHourlyWindBearing = true;
-var showHourlyAccumulation = true;
-var showHourlyHumidity = true;
-var showHourlyProbability = true;
+let showHourlyIcon = true;
+let showHourlyWind = true;
+let showHourlyWindBearing = true;
+let showHourlyAccumulation = true;
+let showHourlyHumidity = true;
+let showHourlyProbability = true;
 
-var showForecastIcon = true;
-var showForecastSummary = true;
-var showForecastMinTemp = true;
-var showForecastWind = true;
-var showForecastWindBearing = true;
-var showForecastHumidity = true;
-var showForecastAccumulation = true;
-var showForecastProbability = true;
+let showForecastIcon = true;
+let showForecastSummary = true;
+let showForecastMinTemp = true;
+let showForecastWind = true;
+let showForecastWindBearing = true;
+let showForecastHumidity = true;
+let showForecastAccumulation = true;
+let showForecastProbability = true;
 
 
-var showDarkSkyLink = true; // set to true if you have a free darksky api key.  
+let showDarkSkyLink = true; // set to true if you have a free darksky api key.
 
-var debugging = false; // will allow showing forecast for past days.  Usefull when playing with sample data
+let debugging = false; // will allow showing forecast for past days.  Usefull when playing with sample data
 
 // Set for your language
 // English
-var todayLabel = "Today";
-var windLabel = "wind";
-var apparentTempLabel = "feeling";
-var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const todayLabel = "Today";
+const windLabel = "wind";
+const apparentTempLabel = "feeling";
+const week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 // French
 //var todayLabel = "Aujourd'hui";
@@ -57,4 +57,4 @@ var month = ["January", "February", "March", "April", "May", "June", "July", "Au
 //var week = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
 //var month = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
 
-var url = 'https://api.darksky.net/forecast/' + apiKey + '/' + latitude + ',' + longitude + '?lang=' + lang + '&units=' + units;
+let url = 'https://api.darksky.net/forecast/' + apiKey + '/' + latitude + ',' + longitude + '?lang=' + lang + '&units=' + units;

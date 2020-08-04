@@ -1,4 +1,9 @@
-# Weather-Forecast-Dashboard
+# Weather Dashboard
+
+Inspired by [Weather-Dashboard-Forecast](https://github.com/vlaine/Weather-Forecast-Dashboard) by @vlaine, after I got extremely disappointed discovering that [DarkSky API](https://darksky.net/dev) will be shut down soon (can't believe the timing 🙄).
+
+---
+
 Read the Wiki: ![https://github.com/vlaine/Weather-Forecast-Dashboard/wiki](https://github.com/vlaine/Weather-Forecast-Dashboard/wiki)
 
 ## Weather Forecast Dashboard written in jquery and html.

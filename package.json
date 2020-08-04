@@ -1,0 +1,29 @@
+{
+  "name": "weather-dashboard",
+  "version": "1.0.0",
+  "description": "Simple Weather Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/martapanc/Weather-Dashboard.git"
+  },
+  "keywords": [
+    "weather",
+    "dashboard",
+    "weather-forecast",
+    "node",
+    "js",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Marta Pancaldi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martapanc/Weather-Dashboard/issues"
+  },
+  "homepage": "https://github.com/martapanc/Weather-Dashboard#readme"
+}

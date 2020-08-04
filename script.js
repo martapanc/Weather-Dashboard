@@ -1,4 +1,4 @@
-﻿var hasAlerts;
+﻿let hasAlerts;
 
 function initialize()
 {
@@ -9,8 +9,8 @@ function initialize()
 	showDateTime();
 	getForecast();
 	
-	var t = setInterval(showDateTime, 500);
-	var f = setInterval(getForecast, 300000);
+	let t = setInterval(showDateTime, 500);
+	let f = setInterval(getForecast, 300000);
 }
 
 function getForecast()
@@ -45,7 +45,7 @@ function showData(data) {
 }
 
 function showAlerts(alerts) {
-    var divAlerts = $("#alerts");
+    let divAlerts = $("#alerts");
 
     if (alerts != null && alerts.length > 0) {
         hasAlerts = true;
@@ -74,31 +74,31 @@ function showCurrent(current, summary) {
 }
 
 function showDateTime() {
-	var now = new Date();
+	let now = new Date();
 	$("#currentDate").text(week[now.getDay()] + ', ' + now.getDate() + ' ' + month[now.getMonth()]);
 	$("#currentTime").text(now.getHours() + (now.getMinutes() < 10 ? ":0" : ":") + now.getMinutes());
 }
 
 function showForecast(days) {
-    var i = 0;
-    var now = (new Date()).setHours(0, 0, 0, 0);
-    var titles = [];
-    var icons = [];
-    var summaries = [];
-    var maxTemps = [];
-    var minTemps = [];
-    var winds = [];
-    var humidities = [];
-    var precipitations = [];
-    var accumulations = [];
+    let i = 0;
+    let now = (new Date()).setHours(0, 0, 0, 0);
+    let titles = [];
+    let icons = [];
+    let summaries = [];
+    let maxTemps = [];
+    let minTemps = [];
+    let winds = [];
+    let humidities = [];
+    let precipitations = [];
+    let accumulations = [];
     
     $.each(days, function (index, day) {
         if (i >= forecastNbOfDays)
         { return false; }
 
-        var dateTime = new Date(0);
+        let dateTime = new Date(0);
         dateTime.setUTCSeconds(day.time);
-        var dayDate = dateTime.setHours(0, 0, 0, 0);
+        let dayDate = dateTime.setHours(0, 0, 0, 0);
         if (dayDate >= now || debugging) {
             titles.push('<th>' + (dayDate == now ? todayLabel : week[dateTime.getDay()]) + '</th>');
             icons.push('<td><i class="' + getIconClass(day.icon, false) + '"></i></td>');
@@ -130,21 +130,21 @@ function showForecast(days) {
 }
 
 function showHourlyForecast(hourlyForecasts) {
-    var hours = [];
-    var icons = [];
-    var temps = [];
-    var winds = [];
-    var humidities = [];
-	var accumulations = [];
-    var precipitations = [];
-    var i = 0;
-    var now = new Date();
+    let hours = [];
+    let icons = [];
+    let temps = [];
+    let winds = [];
+    let humidities = [];
+	let accumulations = [];
+    let precipitations = [];
+    let i = 0;
+    let now = new Date();
     now = now.setHours(now.getHours(), 0, 0, 0);
 
     $.each(hourlyForecasts, function (index, hourly) {
-        var dateTime = new Date(0);
+        let dateTime = new Date(0);
         dateTime.setUTCSeconds(hourly.time);
-        var dayDate = dateTime.setHours(dateTime.getHours(), 0, 0, 0);
+        let dayDate = dateTime.setHours(dateTime.getHours(), 0, 0, 0);
         if (dayDate >= now || debugging) {
             hours.push("<th>" + dateTime.getHours() + "h</th>");
             if (showHourlyIcon){icons.push('<td><i class="' + getIconClass(hourly.icon, true) + '"></i></td>');}
@@ -215,15 +215,15 @@ function getProbability(probability) {
 
 function getAccumulationStr(forecastItem, multiplier)
 {
-	var accumulation = forecastItem.precipAccumulation != null ? forecastItem.precipAccumulation :
+	let accumulation = forecastItem.precipAccumulation != null ? forecastItem.precipAccumulation :
 						       (forecastItem.precipIntensity != null ? forecastItem.precipIntensity * multiplier : 0);
 							   
-	var acc = (accumulation > 0 && accumulation < 1) ? (Math.round(accumulation*10)/10).toString().replace("0.",".") : Math.round(accumulation)
+	let acc = (accumulation > 0 && accumulation < 1) ? (Math.round(accumulation*10)/10).toString().replace("0.",".") : Math.round(accumulation)
 	return acc + '<span style="font-size:14px">' + (forecastItem.precipType == 'snow' ? snowPrecUnit : rainPrecUnit) + '</span>';
 }
 
 function getWind(speed, deg, showWindBearing) {
-    var strWind = '<span>' + Math.round(speed) + '</span>' + windUnit;
+    let strWind = '<span>' + Math.round(speed) + '</span>' + windUnit;
     if (showWindBearing)
     {
         strWind = strWind + '<span class="windContainer"><span class="wind" style="transform: rotate(' + deg + 'deg);">↑</span></span>'
