@@ -1,6 +1,6 @@
 # Weather Dashboard
 
-Inspired by [Weather-Dashboard-Forecast](https://github.com/vlaine/Weather-Forecast-Dashboard) by @vlaine, after I got extremely disappointed discovering that [DarkSky API](https://darksky.net/dev) will be shut down soon (can't believe the timing 🙄).
+Inspired by [Weather-Dashboard-Forecast](https://github.com/vlaine/Weather-Forecast-Dashboard) by @vlaine, after I got extremely disappointed discovering that [DarkSky API](https://darksky.net/dev) will be acquired by Apple soon and is not more accepting dev applications (can't believe the timing 🙄).
 
 ---
 
